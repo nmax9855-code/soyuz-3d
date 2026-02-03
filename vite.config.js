@@ -8,7 +8,13 @@ export default defineConfig({
     minify: 'terser',
     cssMinify: true,
     rollupOptions: {
-      input: 'index.html',
+      input: {
+        main: 'index.html',
+        '3d-modeling': 'pages/3d-modeling.html',
+        '3d-printing': 'pages/3d-printing.html',
+        'cookie-policy': 'pages/cookie-policy.html',
+        'reverse-engineering': 'pages/reverse-engineering.html'
+      },
       output: {
         entryFileNames: 'assets/js/[name]-[hash].js',
         chunkFileNames: 'assets/js/[name]-[hash].js',
