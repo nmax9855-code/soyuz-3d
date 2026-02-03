@@ -1,2 +1,3 @@
-# Netlify redirects for SPA
-/* /index.html 200
+# Serve all pages as-is, no redirects needed
+# All HTML files are already built in dist/
+
