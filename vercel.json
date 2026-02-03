@@ -3,13 +3,21 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/pages/:page.html",
-      "destination": "/pages/:page.html"
+      "src": "/",
+      "dest": "/index.html",
+      "status": 200
+    },
+    {
+      "src": "/pages/(.*)",
+      "dest": "/pages/$1",
+      "status": 200
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "status": 200
     }
   ]
 }
